@@ -33,3 +33,8 @@ int main() {
     auto f6 = Fibonacci<8, 6>::add(f4, f5);
     std::cout << f6.value << std::endl;
 }
+
+
+Fibonacci<15, 20> weird(Fibonacci<7, 18> f18, Fibonacci<8, 19> f19) {
+    Fibonacci<15, 20> f20 = Fibonacci<15, 20>::add(f18, f19);
+}

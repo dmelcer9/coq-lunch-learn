@@ -27,6 +27,15 @@ Qed.
 
 Print f6.
 
+Lemma weird :
+  Fibonacci 7 18 ->
+  Fibonacci 8 19 ->
+  Fibonacci 15 20.
+  intros.
+  exact (FibPlus H H0).
+Qed.
+
+
 Require Import Coq.Arith.Even.
 
 Print even.
@@ -35,6 +44,7 @@ Definition even0: even 0 := even_O.
 Definition odd1 : odd 1 := odd_S 0 even0.
 Definition odd3: odd 3 := odd_S 2 (even_S 1 odd1).
 (* https://coq.inria.fr/library/Coq.Arith.Even.html *)
+(* https://math-comp.github.io/htmldoc/mathcomp.ssreflect.ssrnat.html *)
 
 Lemma even_repeat_3 :
   forall n0 n1 seq,
