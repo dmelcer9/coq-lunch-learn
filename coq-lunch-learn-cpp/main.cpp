@@ -3,7 +3,6 @@
 template<int Num, int SeqPos>
 class Fibonacci;
 
-
 template<>
 class Fibonacci<1, 1> {
     const int value = 1;
