@@ -15,6 +15,8 @@ class Fibonacci<1, 2> {
 
 template<int Num, int SeqPos>
 class Fibonacci {
+private:
+    Fibonacci(){}
 public:
     const int value = Num;
 
@@ -31,6 +33,7 @@ int main() {
     auto f4 = Fibonacci<3, 4>::add(f2, f3);
     auto f5 = Fibonacci<5, 5>::add(f3, f4);
     auto f6 = Fibonacci<8, 6>::add(f4, f5);
+
     std::cout << f6.value << std::endl;
 }
 
